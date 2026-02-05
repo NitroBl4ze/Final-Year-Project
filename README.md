@@ -9,6 +9,27 @@ This project uses a trained Keras model to classify waste categories.
 - `keras_model.h5`: Trained model.
 - `labels.txt`: Class labels.
 
+## 1) Install dependencies
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install tensorflow keras opencv-python numpy pillow streamlit
+```
+
+## 2) Run live webcam app (web UI)
+```bash
+streamlit run app.py
+```
+Then open the URL shown in terminal (usually `http://localhost:8501`).
+
+## 3) Run webcam app (desktop OpenCV)
+```bash
+python main.py
+```
+- Press `Esc` to stop.
+
+## 4) Run automatic performance evaluation
 ## Automatic performance evaluation
 Put your evaluation data in this structure:
 
@@ -24,6 +45,7 @@ dataset/
   Trash/
 ```
 
+Run:
 Then run:
 
 ```bash
@@ -35,6 +57,7 @@ It reports:
 - Per-class precision, recall, F1-score, and support.
 - Confusion matrix.
 
+Optional custom paths:
 You can override file paths:
 
 ```bash
