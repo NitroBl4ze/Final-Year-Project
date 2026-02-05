@@ -30,6 +30,7 @@ python main.py
 - Press `Esc` to stop.
 
 ## 4) Run automatic performance evaluation
+## Automatic performance evaluation
 Put your evaluation data in this structure:
 
 ```text
@@ -45,6 +46,7 @@ dataset/
 ```
 
 Run:
+Then run:
 
 ```bash
 python evaluate_model.py --dataset-dir dataset
@@ -56,6 +58,7 @@ It reports:
 - Confusion matrix.
 
 Optional custom paths:
+You can override file paths:
 
 ```bash
 python evaluate_model.py \
